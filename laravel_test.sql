@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2022 at 10:44 AM
+-- Generation Time: Jan 06, 2023 at 09:25 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -43,9 +43,9 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `title`, `content`, `image`, `user_id`, `category_id`, `created_at`, `updated_at`) VALUES
-(2, 'Sepak Bola', 'Sepak Bola adalah permainan yang dimainkan oleh 11 orang.', '1657722947_eberhard-grossgasteiger-1207565-unsplash.jpg', 'A4', 4, '2022-07-13 01:59:58', '2022-07-13 07:35:47'),
-(3, 'Laptop', 'Laptop adalah salah satu barang elektronik.', '1657704976_product-4-50.png', 'A3', 3, '2022-06-13 02:36:16', '2022-06-13 02:36:16'),
-(4, 'Oreo', 'Oreo Adalah Suatu Jajajan Yang Enak', '1657719841_product-5-50.png', 'A1', 1, '2022-02-13 06:44:01', '2022-02-13 06:44:01'),
+(2, 'Sepak Bola', 'Sepak Bola adalah permainan yang dimainkan oleh 11 orang.', '1672993237_sepakbola.jpg', 'A4', 4, '2022-07-13 01:59:58', '2023-01-06 01:20:37'),
+(3, 'Laptop', 'Laptop adalah salah satu barang elektronik.', '1672993111_laptop.png', 'A3', 3, '2022-06-13 02:36:16', '2023-01-06 01:18:31'),
+(4, 'Oreo', 'Oreo Adalah Suatu Jajajan Yang Enak', '1672993014_oreo2.jpeg', 'A1', 1, '2022-02-13 06:44:01', '2023-01-06 01:16:54'),
 (5, 'Coca - Cola', 'Coca Cola adalah salah satu minuman bersoda yang melegenda.', '1657780433_cola.jpg', 'A2', 2, '2022-07-13 23:33:53', '2022-07-13 23:33:53');
 
 -- --------------------------------------------------------
@@ -72,7 +72,8 @@ INSERT INTO `categories` (`id`, `name`, `user_id`, `created_at`, `updated_at`) V
 (3, 'Teknologi', 'A3', '2022-07-13 01:57:14', '2022-07-13 02:01:50'),
 (4, 'Olahraga', 'A4', '2022-07-13 01:57:14', '2022-07-13 02:02:07'),
 (5, 'Game', 'A5', '2022-07-13 01:57:14', '2022-07-13 02:02:20'),
-(6, 'Hewan', 'A6', '2022-07-14 00:31:38', '2022-07-14 00:31:38');
+(6, 'Hewan', 'A6', '2022-07-14 00:31:38', '2022-07-14 00:31:38'),
+(7, 'Hutan', 'A7', '2023-01-06 01:06:30', '2023-01-06 01:06:30');
 
 -- --------------------------------------------------------
 
@@ -166,8 +167,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Daniar Nur Amin', 'daniar@gmail.com', NULL, '$2y$10$pwitcv1WHXnhLbhN9fGFyuBsjtw5iTQs3PZRMIoLBdCawej.zGiai', 'fM5UFhdBkYVMXQ024P7jkYIa4basO2DkKRf5eKR0HgUK6xBseJynziz7XwlL', NULL, NULL),
-(2, 'Supri', 'supri@gmail.com', NULL, '$2y$10$JoJgFZerdGs1Joc.ERN0Ketiqd/GroSLkEAHGToTwaS/TYXBPonfi', '4x6hTwa7BA5Q2bQrdvUHGDxRNrINwr9NPzBm1bkOW3092uNWWuEtQy3pVVqR', NULL, NULL),
+(1, 'Daniar Nur Amin', 'daniar@gmail.com', NULL, '$2y$10$pwitcv1WHXnhLbhN9fGFyuBsjtw5iTQs3PZRMIoLBdCawej.zGiai', 'JTjGKn4bTiL3laUTSeYFbcN9d8khxBb81onShANnWxm26ejqRXXgQ0lBCVRy', NULL, NULL),
+(2, 'Supri', 'supri@gmail.com', NULL, '$2y$10$JoJgFZerdGs1Joc.ERN0Ketiqd/GroSLkEAHGToTwaS/TYXBPonfi', 'bfZjhsw0V2kitC803U4TSJp5ytmdGLMDu1v4W3RPRSjGmg6evh2I7nwYeUO5', NULL, NULL),
 (3, 'Admin', 'admin@gmail.com', NULL, '$2y$10$hJbeydd.NtbNj6AePUlO4OxG.DH9FLhhnJxm9UqWGT0tnYjZ2i9Iq', NULL, '2022-07-14 00:29:38', '2022-07-14 00:29:38');
 
 --
@@ -235,7 +236,7 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`

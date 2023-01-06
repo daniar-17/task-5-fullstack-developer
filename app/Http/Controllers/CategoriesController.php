@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categories;
+use App\Http\Resources\CategoriesResource;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -10,6 +11,16 @@ use Illuminate\Validation\Rule;
 
 class CategoriesController extends Controller
 {
+    public function index()
+    {
+        //melakukan quey get data
+        $categories = Categories::all(); //select * from categories
+        $categoriesRecourse = CategoriesResource::collection($categories);
+        // // return response()->json($categoriesRecourse, 200);
+        // return $this->sendResponse($categoriesRecourse, "succesfull get categories");
+        dd($categoriesRecourse);
+    }
+
     public function data()
     {
         $datas = DB::table('categories')->get();

@@ -56,7 +56,7 @@
                         <td>Title</td>
                         <td>Content</td>
                         <td>Category</td>
-                        <td>User Id</td>
+                        <td>Id Category</td>
                         <td style="width: 10%">Aksi</td>
                     </tr>
                 </thead>

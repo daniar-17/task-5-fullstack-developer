@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>@yield('title') - Investree</title>
+  <title>@yield('title') - Article.Id</title>
   
   @yield('styles_css')
   
@@ -82,8 +82,8 @@
   <aside class="main-sidebar elevation-4"> <!--sidebar-dark-primary -->
     <!-- Brand Logo -->
     <a href="#" class="brand-link bg-success">
-      <i class="fas fa-tree fa-lg"></i> -
-      <span class="brand-text font-weight-light">Investree</span>
+      <i class="fab fa-audible fa-lg"></i> -
+      <span class="brand-text font-weight-light"><strong>Article.Id</strong></span>
     </a>
 
     <!-- Sidebar -->
@@ -164,7 +164,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2021 <a href="">Investree</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="">Article.Id</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->

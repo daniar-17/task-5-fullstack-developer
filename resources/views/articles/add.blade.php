@@ -64,7 +64,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="">User Id</label>
+                                            <label for="">Id Category</label>
                                             <div class="input-group mb-3">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text"><i class="fas fa-user"></i></span>

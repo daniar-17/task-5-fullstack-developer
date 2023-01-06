@@ -41,8 +41,8 @@
                 <thead>
                     <tr class="font-weight-bold">
                         <td>#</td>
+                        <td>Id Category</td>
                         <td>Nama Category</td>
-                        <td>User Id</td>
                         <td style="width: 10%">Aksi</td>
                     </tr>
                 </thead>
@@ -50,8 +50,8 @@
                     @foreach ($datas as $item)
                     <tr>
                         <th>{{$loop->iteration}}</th>
-                        <td class="dots-text">{{$item->name}}</td>
                         <td>{{$item->user_id}}</td>
+                        <td class="dots-text">{{$item->name}}</td>
                         <td class="text-center">
                             <a href="{{ url('categories/edit/' .$item->id ) }}" class="btn btn-primary btn-sm" title="Edit">
                                 <i class="fas fa-pencil-alt"></i>

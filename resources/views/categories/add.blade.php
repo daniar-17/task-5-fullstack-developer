@@ -39,16 +39,16 @@
                     <form action="{{url('categories/addProcess')}}" method="post" enctype="multipart/form-data" onsubmit="return confirm('Apakah Data Akan Disimpan ? ')" class="form-horizontal">
                         @csrf
                         <div class="form-group">
-                            <label for="">Nama Category</label>
-                            <input type="text" name="name_category" class="form-control @error('name_category') is-invalid @enderror" value="{{ old('name_category') }}" autofocus placeholder="Nama Category . . .">
-                            @error('name_category')
+                            <label for="">Id Category</label>
+                            <input type="text" name="user_id" class="form-control @error('user_id') is-invalid @enderror" value="{{ old('user_id') }}" autofocus placeholder="Id Category . . .">
+                            @error('user_id')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">User Id</label>
-                            <input type="text" name="user_id" class="form-control @error('user_id') is-invalid @enderror" value="{{ old('user_id') }}" autofocus placeholder="User Id . . .">
-                            @error('user_id')
+                            <label for="">Nama Category</label>
+                            <input type="text" name="name_category" class="form-control @error('name_category') is-invalid @enderror" value="{{ old('name_category') }}" autofocus placeholder="Nama Category . . .">
+                            @error('name_category')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
