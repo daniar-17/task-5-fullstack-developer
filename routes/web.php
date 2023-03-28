@@ -41,6 +41,8 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/articles/edit/{id}', [ArticlesController::class, 'edit']);
     Route::post('/articles/editProcess/{id}', [ArticlesController::class, 'editProcess']);
     Route::post('/articles/delete/{id}', [ArticlesController::class, 'delete']);
+
+    Route::post('/articles/uploads', [ArticlesController::class, 'uploadImage'])->name('posts.upload');
 });
 
 

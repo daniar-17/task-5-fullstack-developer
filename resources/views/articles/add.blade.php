@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <form action="{{url('articles/addProcess')}}" method="post" enctype="multipart/form-data" onsubmit="return confirm('Apakah Data Akan Disimpan ? ')">
                         @csrf
-                        <div class="row">
+                        <div class="row">  
                             <div class="col-1"></div>
                             <div class="col-10">
                                 <div class="row">
@@ -75,25 +75,14 @@
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="">Content</label>
-                                            <textarea name="content" class="form-control" value="" rows="2" placeholder="Content . . ." required>{{ old('content') }}</textarea>
-                                        </div>
-                                    </div>
-                                    {{-- Baigan Kiri - End --}}
-
-                                    {{-- Baigan Kanan - Start --}}
-                                    <div class="col-6 border-left">
-                                        <div class="form-group">
-                                            <label for="">Image</label>
-                                            <p>
-                                                <img src="{{asset('/img/news/img01.jpg')}}" class="img img-rounded" id="upload_target" width="100%" style="border: 1px solid #555;" >
-                                            </p>
-                                            <label class="form-control btn btn-info">
-                                                <input accept="image/*" type="file" class="form-control" name="image" id="daftar_foto" style="display: none;"> Pilih Foto
-                                            </label>
-                                        </div>
                                         <hr style="border: 1px solid;" class="text-secondary">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label class="form-control btn btn-info">
+                                                    <input accept="image/*" type="file" class="form-control" name="image" id="daftar_foto" style="display: none;"> Pilih Foto
+                                                </label>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <a href="{{ url('articles') }}" class="btn btn-sm btn-danger btn-block">
@@ -105,7 +94,29 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{-- Baigan Kiri - End --}}
+
+                                    {{-- Baigan Kanan - Start --}}
+                                    <div class="col-6 border-left">
+                                        <div class="form-group">
+                                            <label for="">Image</label>
+                                            <p>
+                                                <img src="{{asset('/img/news/img01.jpg')}}" class="img img-rounded" id="upload_target" width="100%" style="border: 1px solid #555;" >
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
                                     {{-- Baigan Kanan - End --}}
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <div class="form-group">
+                                    <label for="">Content</label>
+                                    <textarea id="content" name="content" class="form-control" value="" rows="2" placeholder="Content . . ." required>{{ old('content') }}</textarea>
                                 </div>
                             </div>
                             <div class="col-1"></div>
@@ -134,6 +145,11 @@
                 upload_target.src = URL.createObjectURL(file)
             }
         }
+
+        CKEDITOR.replace('content', {
+            filebrowserUploadUrl: "{{ route('posts.upload', ['_token' => csrf_token()]) }}",
+            filebrowserUploadMethod: 'form'
+        })
     });
 </script>
 

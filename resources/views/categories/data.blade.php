@@ -83,7 +83,6 @@
       }).buttons().container().appendTo('#bootstrap-data-table_wrapper .col-md-6:eq(0)');
 
       $("#bootstrap-data-table2").DataTable();
-      
     });
 
 </script>

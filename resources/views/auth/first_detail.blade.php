@@ -12,7 +12,7 @@
                 </div>
                 <div class="container p-3">
                     <h4><b>{{ $datas->title }}</b></h4>
-                    <p class="dots-test">{{ $datas->content }}</p>
+                    <p class="dots-test">{!! html_entity_decode($datas->content) !!}</p>
                     <a href="{{ url('/') }}" class="btn btn-block btn-outline-secondary btn-sm"><i class="fas fa-arrow-circle-left"></i> <u>Kembali</u></a>
                 </div>
             </div>

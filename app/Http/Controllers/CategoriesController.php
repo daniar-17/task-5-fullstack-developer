@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
+// use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoriesController extends Controller
 {
@@ -61,19 +62,19 @@ class CategoriesController extends Controller
     public function editProcess($id, Request $request)
     {
         $request->validate([
-            'name_category' => ['required', Rule::unique('categories','name')->ignore($id),],
-            'user_id' => ['required', Rule::unique('categories','user_id')->ignore($id),],
+            'name_category' => ['required', Rule::unique('categories', 'name')->ignore($id),],
+            'user_id' => ['required', Rule::unique('categories', 'user_id')->ignore($id),],
         ], [
             'name_category.required' => 'Nama Category Harus di Isi !',
             'user_id.required' => 'User Id Harus di Isi !',
             'name_category.unique' => 'Nama Category Sudah Pernah Ada !',
             'user_id.unique' => 'User Id Sudah Pernah Ada !',
         ]);
-        
+
         $updated = Categories::where('id', $id)->update([
             'name' => $request->name_category,
             'user_id' => $request->user_id,
-          ]);
+        ]);
 
         return redirect('categories')->with('status', 'Data Berhasil diUbah !');
     }
@@ -83,5 +84,5 @@ class CategoriesController extends Controller
         $delete = Categories::where('id', $id)->delete();
         return redirect('categories')->with('status', 'Data Berhasil diHapus !');
     }
-//Last Line
+    //Last Line
 }

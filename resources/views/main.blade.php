@@ -148,6 +148,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    {{-- @include('sweetalert::alert') --}}
     <!-- Content Header (Page header) -->
     <section class="content-header">
         @yield('header_content')
@@ -220,6 +221,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('style/dist/js/demo.js')}}"></script>
 <!-- Page specific script -->
+
+{{-- CDN CKEditor 4 --}}
+<script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
 
 @yield('jscript')
 
